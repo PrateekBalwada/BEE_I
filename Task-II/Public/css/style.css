@@ -1,0 +1,202 @@
+/* CSS Variables */
+:root {
+    --bg-color: #f9f9f9;
+    --text-color: #333;
+    --container-bg: #fff;
+    --primary-color: #7b5fff;
+    --secondary-color: #6c63ff;
+    --border-color: #ccc;
+    --completed-task-color: gray;
+    --input-bg: #fff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Dark Mode Variables */
+  .dark-mode {
+    --bg-color: #2c2c2c;
+    --text-color: #fff;
+    --container-bg: #3a3a3a;
+    --primary-color: #9b7bff;
+    --secondary-color: #574fd6;
+    --border-color: #555;
+    --completed-task-color: #888;
+    --input-bg: #555;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .todo-container {
+    width: 400px;
+    background: var(--container-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    padding: 20px;
+    position: relative;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--text-color);
+  }
+  
+  .search-bar {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .search-bar input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background: var(--input-bg);
+    color: var(--text-color);
+  }
+  
+  .search-bar button {
+    padding: 8px;
+    border: none;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  li.completed span {
+    text-decoration: line-through;
+    color: var(--completed-task-color);
+  }
+  
+  li input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .actions select,
+  .actions button {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    background: var(--input-bg);
+    color: var(--text-color);
+  }
+  
+  .add-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: white;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px var(--shadow-color);
+  }
+  
+  /* Add Task Page Styles */
+  .todo-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--shadow-color);
+    background-color: var(--container-bg);
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--text-color);
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  input[type="text"] {
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    background: var(--input-bg);
+    color: var(--text-color);
+  }
+  
+  input[type="text"]:focus {
+    border-color: var(--secondary-color);
+  }
+  
+  button {
+    padding: 12px;
+    background-color: var(--secondary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: var(--primary-color);
+  }
+  
+  a {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: var(--primary-color);
+  }
+  
+  span {
+    transition: color 0.3s, text-decoration 0.3s;
+  }
+  
+  .completed-task {
+    text-decoration: line-through;
+    color: var(--completed-task-color);
+  }
+  

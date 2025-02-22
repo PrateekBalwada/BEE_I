@@ -1,0 +1,27 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <meta charset="UTF-8">  
+  <title>ToDo List</title>  
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/css/script.js"></script>
+  
+</head>  
+<body>  
+  <div class="todo-container">  
+    <h1>To Do List</h1><button id="theme-toggle">Toggle Theme</button>
+    <ul>
+        <% tasks.forEach(task => { %>
+          <li>
+            <input type="checkbox" class="task-checkbox" data-id="<%= task.id %>" <%= task.completed ? 'checked' : '' %>>
+            <span class="<%= task.completed ? 'completed-task' : '' %>">
+              <%= task.title %>
+            </span>
+          </li>
+        <% }); %>
+      </ul>      
+              
+    <a href="/add-task" class="add-btn">+</a>  
+  </div>  
+</body>  
+</html>  
