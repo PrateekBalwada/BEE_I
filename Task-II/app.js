@@ -15,13 +15,13 @@ app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));  
 app.use(bodyParser.urlencoded({ extended: true }));  
 
-// Middleware to log request timestamps  
+ 
 app.use((req, res, next) => {  
   console.log(`${new Date().toISOString()} - ${req.method} ${req.url}`);  
   next();  
 });  
 
-// Routes  
+ 
 app.get('/tasks', (req, res) => {
     fs.readFile('./tasks.json', 'utf8', (err, data) => {
       if (err) return res.status(500).send('Error reading tasks');
